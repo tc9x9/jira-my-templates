@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+  <plugin-info>
+    <description>${project.description}</description>
+    <version>${project.version}</version>
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    <param name="plugin-icon">images/pluginIcon.png</param>
+    <param name="plugin-logo">images/pluginLogo.png</param>
+  </plugin-info>
+  <!-- add our i18n resource -->
+  <resource type="i18n" name="i18n" location="mytemplates"/>
+  <!-- add our web resources -->
+  <web-resource key="mytemplates-resources" name="MyTemplate Web Resources">
+    <dependency>com.atlassian.auiplugin:ajs</dependency>
+    <dependency>com.atlassian.auiplugin:aui-select2</dependency>
+    <resource type="download" name="jirahelper.css" location="/css/jirahelper.css"/>
+    <resource type="download" name="mytemplates.js" location="/js/mytemplates.js"/>
+    <resource type="download" name="images/" location="/images"/>
+    <context>mytemplates</context>
+  </web-resource>
+  <webwork1 key="add-issues" name="addIssues" i18n-name-key="add-issues.name">
+    <description key="add-issues.description">The addIssues Plugin</description>
+    <actions>
+      <action name="com.tc.jira.webwork.AddSubTask" alias="AddSubTask">
+        <view name="success">/templates/addsubtask/success.vm</view>
+      </action>
+    </actions>
+  </webwork1>
+  <web-item name="AddSubtask" i18n-name-key="audit-subtask.name" key="audit-subtask" section="operations-operations" weight="1000">
+    <description key="audit-subtask.description">myTemplates Subtask fPlugin</description>
+    <label key="audit-subtask.label"></label>
+<!--    <link linkId="audit-subtask-link">/secure/AddSubTask!default.jspa?parentIssueId=${issue.id}</link> -->
+    <link linkId="audit-subtask-link">/secure/AddSubTask.jspa?issueId=${issue.id}</link>
+    <condition class="com.tc.jira.webwork.ProjectCondition">
+      <param name="currentProjectKey">${project.key}</param>
+    </condition>
+  </web-item>
+
+  <servlet key="admin-servlet" class="com.tc.jira.adminui.AdminServlet">
+    <url-pattern>/mytemplates/admin</url-pattern>
+  </servlet>
+  <web-section key="mytemplates-menu-section" location="admin_plugins_menu">
+    <label key="my_new_section_name.label"/>
+    <description key="my_new_section_name.description">myTemplate admin plugin</description>
+  </web-section>
+  <web-item key="mytemplates-menu-item" name="myTemplates Config" section="admin_plugins_menu/mytemplates-menu-section" weight="95">
+    <description key="mytemplates-admin-link.description">myTemplates configuration</description>
+    <label key="mytemplates-admin-link.label"/>
+    <link linkId="mytemplates-admin-link">/plugins/servlet/mytemplates/admin</link>
+  </web-item>
+  <rest key="rest" path="/mytemplates" version="1.0">
+    <description>myTemplates internal REST.</description>
+  </rest>
+</atlassian-plugin>

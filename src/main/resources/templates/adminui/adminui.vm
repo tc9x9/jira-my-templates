@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>MyTemplates Admin</title>
+    <meta name="decorator" content="atl.admin">
+    $webResourceManager.requireResource("com.tc.jira.mytemplates:mytemplates-resources")
+  </head>
+  <body>
+  <form id="admin" class="aui">
+    <div class="field-group">
+         <label for="project">Project</label>
+         <select id="selectproject" name="name" class="select"
+          style="width: 250px;" autocomplete="off">
+        </select>
+    </div>
+    <div class="field-group">
+      <label for="subtask1">Subtask 1</label>
+      <select id="issuetype1" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+      <input type="text" id="subtask1" name="name" class="text" style="vertical-align: bottom;">
+    </div>
+    <div class="field-group">
+      <label for="subtask2">Subtask 2</label>
+      <select id="issuetype2" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+       <input type="text" id="subtask2" name="time" class="text" style="vertical-align: bottom;">
+    </div>
+    <div class="field-group">
+      <label for="subtask3">Subtask 3</label>
+      <select id="issuetype3" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+      <input type="text" id="subtask3" name="time" class="text" style="vertical-align: bottom;">
+    </div>
+    <div class="field-group">
+      <label for="subtask4">Subtask 4</label>
+      <select id="issuetype4" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+      <input type="text" id="subtask4" name="time" class="text" style="vertical-align: bottom;">
+    </div>
+    <div class="field-group">
+     </div>
+    <div class="field-group">
+      <label for="subtask5">Subtask 5</label>
+      <select id="issuetype5" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+      <input type="text" id="subtask5" name="time" class="text" style="vertical-align: bottom;">
+     </div>
+     <div class="field-group">
+       <label for="subtask6">Subtask 6</label>
+       <select id="issuetype6" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+       <input type="text" id="subtask6" name="name" class="text" style="vertical-align: bottom;">
+      </div>
+      <div class="field-group">
+        <label for="subtask7">Subtask 7</label>
+        <select id="issuetype7" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+        <input type="text" id="subtask7" name="time" class="text" style="vertical-align: bottom;">
+      </div>
+      <div class="field-group">
+        <label for="subtask8">Subtask 8</label>
+        <select id="issuetype8" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+        <input type="text" id="subtask8" name="time" class="text" style="vertical-align: bottom;">
+      </div>
+      <div class="field-group">
+        <label for="subtask9">Subtask 9</label>
+        <select id="issuetype9" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+        <input type="text" id="subtask9" name="time" class="text" style="vertical-align: bottom;">
+      </div>
+      <div class="field-group">
+        <label for="subtask10">Subtask 10</label>
+        <select id="issuetype10" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+        <input type="text" id="subtask10" name="time" class="text" style="vertical-align: bottom;">
+      </div>
+      <div class="field-group">
+        <label for="subtask11">Subtask 11</label>
+        <select id="issuetype11" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+        <input type="text" id="subtask11" name="time" class="text" style="vertical-align: bottom;">
+      </div>
+      <div class="field-group">
+        <label for="subtask12">Subtask 12</label>
+        <select id="issuetype12" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+        <input type="text" id="subtask12" name="time" class="text" style="vertical-align: bottom;">
+      </div>
+      <div class="field-group">
+        <label for="subtask13">Subtask 13</label>
+        <select id="issuetype13" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+        <input type="text" id="subtask13" name="time" class="text" style="vertical-align: bottom;">
+      </div>
+      <div class="field-group">
+        <label for="subtask14">Subtask 14</label>
+        <select id="issuetype14" name="typename" class="select" autocomplete="off" style="vertical-align: bottom;width:150px"></select>
+        <input type="text" id="subtask14" name="time" class="text" style="vertical-align: bottom;">
+      </div>
+     <div class="field-group">
+       <input type="submit" value="Save" class="button">
+     </div>
+  </form>
+  </body>
+</html>
